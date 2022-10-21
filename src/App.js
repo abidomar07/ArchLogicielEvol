@@ -12,6 +12,7 @@ import ListComptesComponent from './components/CompteComponents/ListCompteCompon
 
 import ListClientComponent from './components/clientComponents/ListClientsComponent';
 import UpdateClientComponent from './components/clientComponents/UpdateClientComponent';
+import CreateClientComponent from './components/clientComponents/CreateClientComponent';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
                           {/* <Route path = "/update-employee/:id" component = {UpdateEmployeeComponent}></Route> */}
                           <Route path = "/clients/all" component = {ListClientComponent}></Route> 
                           <Route path = "/clients/update/:cinId" component = {UpdateClientComponent}></Route> 
+                          <Route path = "/add-client/:cinId" component = {CreateClientComponent}></Route> 
                           
                     </Switch>
                 </div>
