@@ -9,7 +9,7 @@ class CompteService {
     }
 
     createCompte(Compte){
-        return axios.post(Compte_API_BASE_URL, Compte);
+        return axios.post(Compte_API_BASE_URL + '/savecompte', Compte);
     }
 
     getCompteById(CompteId){
