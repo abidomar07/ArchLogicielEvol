@@ -13,15 +13,15 @@ class ClientService {
     }
 
     getClientById(clientId){
-        return axios.get(EMPLOYEE_API_BASE_URL + '/' + clientId);
+        return axios.get(EMPLOYEE_API_BASE_URL + '/getbycin/' + clientId);
     }
 
     updateClient(client, clientId){
-        return axios.put(EMPLOYEE_API_BASE_URL + '/update/' /*+ clientId*/, client);
+        return axios.put(EMPLOYEE_API_BASE_URL + '/update/' + clientId, client);
     }
 
     deleteClient(clientId){
-        return axios.delete(EMPLOYEE_API_BASE_URL + '/' + clientId);
+        return axios.delete(EMPLOYEE_API_BASE_URL + '/delete/' + clientId);
     }
 }
 

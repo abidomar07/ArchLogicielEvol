@@ -16,7 +16,7 @@ class UpdateClientComponent extends Component {
         this.updateClient = this.updateClient.bind(this);
     }
 
-    componentDcinIdMount(){
+    componentDidMount(){
         ClientService.getClientById(this.state.cinId).then( (res) =>{
             let client = res.data;
             this.setState({prenom: client.prenom,
@@ -32,7 +32,7 @@ class UpdateClientComponent extends Component {
         console.log('client => ' + JSON.stringify(client));
         console.log('cinId => ' + JSON.stringify(this.state.cinId));
         ClientService.updateClient(client, this.state.cinId).then( res => {
-            this.props.history.push('/clients');
+            this.props.history.push('/clients/all');
         });
     }
     
@@ -73,7 +73,7 @@ class UpdateClientComponent extends Component {
                                                 value={this.state.nom} onChange={this.changeLastNameHandler}/>
                                         </div>
                                         <div className = "form-group">
-                                            <label> Email Id: </label>
+                                            <label> Email </label>
                                             <input placeholder="Email Address" name="cin" className="form-control" 
                                                 value={this.state.cin} onChange={this.changeEmailHandler}/>
                                         </div>

@@ -28,7 +28,7 @@ function App() {
                           <Route path = "/view-employee/:id" component = {ViewEmployeeComponent}></Route>
                           {/* <Route path = "/update-employee/:id" component = {UpdateEmployeeComponent}></Route> */}
                           <Route path = "/clients/all" component = {ListClientComponent}></Route> 
-                          <Route path = "/clients/update" component = {UpdateClientComponent}></Route> 
+                          <Route path = "/clients/update/:cinId" component = {UpdateClientComponent}></Route> 
                           
                     </Switch>
                 </div>
