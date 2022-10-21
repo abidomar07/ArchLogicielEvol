@@ -15,7 +15,7 @@ class ListCompteComponent extends Component {
 
     deleteCompte(id){
         CompteService.deleteCompte(id).then( res => {
-            this.setState({Comptes: this.state.Comptes.filter(Compte => Compte.id !== id)});
+            this.setState({Comptes: this.state.Comptes.filter(Compte => Compte.rib !== id)});
         });
     }
     viewCompte(id){
@@ -65,7 +65,7 @@ class ListCompteComponent extends Component {
                                              
                                              <td>
                                                  <button onClick={ () => this.editCompte(Compte.id)} className="btn btn-info">Update </button>
-                                                 <button style={{marginLeft: "10px"}} onClick={ () => this.deleteCompte(Compte.id)} className="btn btn-danger">Delete </button>
+                                                 <button style={{marginLeft: "10px"}} onClick={ () => this.deleteCompte(Compte.rib)} className="btn btn-danger">Delete </button>
                                                  <button style={{marginLeft: "10px"}} onClick={ () => this.viewCompte(Compte.id)} className="btn btn-info">View </button>
                                              </td>
                                         </tr>

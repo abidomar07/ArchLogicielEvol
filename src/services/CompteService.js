@@ -20,8 +20,8 @@ class CompteService {
         return axios.put(Compte_API_BASE_URL + '/' + CompteId, Compte);
     }
 
-    deleteCompte(CompteId){
-        return axios.delete(Compte_API_BASE_URL + '/' + CompteId);
+    deleteCompte(rib){
+        return axios.delete(Compte_API_BASE_URL + '/deletecompte/' + rib);
     }
 }
 
