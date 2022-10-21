@@ -8,6 +8,7 @@ import FooterComponent from './components/FooterComponent';
 import CreateEmployeeComponent from './components/CreateEmployeeComponent';
 import UpdateEmployeeComponent from './components/UpdateEmployeeComponent';
 import ViewEmployeeComponent from './components/ViewEmployeeComponent';
+import ListComptesComponent from './components/CompteComponents/ListCompteComponent';
 
 import ListClientComponent from './components/clientComponents/ListClientsComponent';
 import UpdateClientComponent from './components/clientComponents/UpdateClientComponent';
@@ -20,6 +21,7 @@ function App() {
               <HeaderComponent />
                 <div className="container">
                     <Switch> 
+                          <Route path = "/comptes" component = {ListComptesComponent}></Route>
                           <Route path = "/" exact component = {ListEmployeeComponent}></Route>
                           <Route path = "/employees" component = {ListEmployeeComponent}></Route>
                           <Route path = "/add-employee/:id" component = {CreateEmployeeComponent}></Route>
@@ -27,6 +29,7 @@ function App() {
                           {/* <Route path = "/update-employee/:id" component = {UpdateEmployeeComponent}></Route> */}
                           <Route path = "/clients/all" component = {ListClientComponent}></Route> 
                           <Route path = "/clients/update" component = {UpdateClientComponent}></Route> 
+                          
                     </Switch>
                 </div>
               <FooterComponent />
