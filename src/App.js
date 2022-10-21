@@ -9,6 +9,10 @@ import CreateEmployeeComponent from './components/CreateEmployeeComponent';
 import UpdateEmployeeComponent from './components/UpdateEmployeeComponent';
 import ViewEmployeeComponent from './components/ViewEmployeeComponent';
 
+import ListClientComponent from './components/clientComponents/ListClientsComponent';
+import UpdateClientComponent from './components/clientComponents/UpdateClientComponent';
+
+
 function App() {
   return (
     <div>
@@ -21,6 +25,8 @@ function App() {
                           <Route path = "/add-employee/:id" component = {CreateEmployeeComponent}></Route>
                           <Route path = "/view-employee/:id" component = {ViewEmployeeComponent}></Route>
                           {/* <Route path = "/update-employee/:id" component = {UpdateEmployeeComponent}></Route> */}
+                          <Route path = "/clients/all" component = {ListClientComponent}></Route> 
+                          <Route path = "/clients/update" component = {UpdateClientComponent}></Route> 
                     </Switch>
                 </div>
               <FooterComponent />
