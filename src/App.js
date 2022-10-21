@@ -6,6 +6,7 @@ import ListEmployeeComponent from './components/ListEmployeeComponent';
 import HeaderComponent from './components/HeaderComponent';
 import FooterComponent from './components/FooterComponent';
 import CreateEmployeeComponent from './components/CreateEmployeeComponent';
+import CreateCompteComponent from './components/CompteComponents/CreateCompteComponent';
 import UpdateEmployeeComponent from './components/UpdateEmployeeComponent';
 import ViewEmployeeComponent from './components/ViewEmployeeComponent';
 import ListComptesComponent from './components/CompteComponents/ListCompteComponent';
@@ -22,13 +23,15 @@ function App() {
                 <div className="container">
                     <Switch> 
                           <Route path = "/comptes" component = {ListComptesComponent}></Route>
+                          <Route path = "/add-compte/:id" component = {CreateCompteComponent}></Route>
                           <Route path = "/" exact component = {ListEmployeeComponent}></Route>
-                          <Route path = "/employees" component = {ListEmployeeComponent}></Route>
+                          {/*  <Route path = "/employees" component = {ListEmployeeComponent}></Route>*/}
                           <Route path = "/add-employee/:id" component = {CreateEmployeeComponent}></Route>
                           <Route path = "/view-employee/:id" component = {ViewEmployeeComponent}></Route>
                           {/* <Route path = "/update-employee/:id" component = {UpdateEmployeeComponent}></Route> */}
                           <Route path = "/clients/all" component = {ListClientComponent}></Route> 
                           <Route path = "/clients/update" component = {UpdateClientComponent}></Route> 
+                
                           
                     </Switch>
                 </div>
